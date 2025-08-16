@@ -1,0 +1,9 @@
+Installation of next.js v-13.
+Would you like to use TypeScript? No
+Would you like to use ESlint? No
+Would you like to use Tailwind CSS? No
+Would you like to use 'src/directory? Yes
+Would you like to use App Router? Yes
+Would you like to customize the default import alias (@/*)? Yes
+
+
