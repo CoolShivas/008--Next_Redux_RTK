@@ -7,3 +7,13 @@ Would you like to use App Router? Yes
 Would you like to customize the default import alias (@/*)? Yes
 
 
+Interview Questions :-
+
+Que. 1.) After refreshing an redux app. Is it true, that after refreshing app the data remains on screen. OR Kiya refresh karne ke baad redux ka data app me rehta h ki nahi.
+Ans. 1.) No, it will remove from the localStorage and it is in the form of object.
+
+Que. 2.) How to keep data on app localStorage ?
+Ans. 2.) Using get data from localStorage or Using redux persist library.
+
+Que. 3.) In which way the data flow in redux.
+Que. 3.) Unidirectionnal.
