@@ -17,3 +17,7 @@ Ans. 2.) Using get data from localStorage or Using redux persist library.
 
 Que. 3.) In which way the data flow in redux.
 Que. 3.) Unidirectionnal.
+
+
+
+StoreJs contains the data which we are going to push inside the app.
