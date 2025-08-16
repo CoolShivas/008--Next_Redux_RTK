@@ -1,10 +1,16 @@
 "use client";
 import React, { useState } from "react";
+import { addUsers } from "../redux/slice";
+import { useDispatch } from "react-redux";
 
 const AddUsers = () => {
   const [inputValue, setInputValue] = useState("");
+
+  const dispatch = useDispatch();
+
   const handlerOnAddBtn = () => {
-    console.log(inputValue); // Getting data on Browser Console;
+    // console.log(inputValue); // Getting data on Browser Console;
+    dispatch(addUsers(inputValue)); // Import of addUsers action from Slice. As well as dispatching action to Slice;
   };
   return (
     <>

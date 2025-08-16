@@ -9,6 +9,7 @@ const Slices = createSlice({
   initialState,
   reducers: {
     addUsers: (state, action) => {
+      console.log(action); // Getting the data on Browser Console as:-{type: 'addUserSlice/addUsers', payload: 'shiva'}
       const data = {
         id: nanoid(),
         name: action.userName,
