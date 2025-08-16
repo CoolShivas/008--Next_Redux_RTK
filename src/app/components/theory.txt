@@ -16,8 +16,11 @@ Que. 2.) How to keep data on app localStorage ?
 Ans. 2.) Using get data from localStorage or Using redux persist library.
 
 Que. 3.) In which way the data flow in redux.
-Que. 3.) Unidirectionnal.
+Ans. 3.) Unidirectionnal.
 
 
 
 StoreJs contains the data which we are going to push inside the app.
+
+Que. 4.) What is Slice ?
+Ans. 4.) A slice is a collection of Redux reducer logic and actions for a single feature in your app. In slice we defined action and reducer in a single file.
