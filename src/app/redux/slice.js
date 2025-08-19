@@ -29,7 +29,8 @@ const Slices = createSlice({
         return curr.id !== action.payload;
       });
       state.users = data;
-      localStorage.removeItem("mahakal", JSON.stringify(state.users)); // Removed all the localStorage data instead of particular one only;
+      // localStorage.removeItem("mahakal", JSON.stringify(state.users)); // Removed all the localStorage data instead of particular one only;
+      localStorage.setItem("mahakal", JSON.stringify(state.users)); // Removing particular item from the localStorage data instead of all;
     },
   },
 });
