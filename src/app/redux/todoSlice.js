@@ -16,8 +16,14 @@ const ToDoSlice = createSlice({
       };
       state.toDoArr.push(data);
     },
+    removeToDoS: (state, action) => {
+      const data = state.toDoArr.filter((curr) => {
+        return curr.id !== action.payload;
+      });
+      state.toDoArr = data;
+    },
   },
 });
 
-export const { addToDoS } = ToDoSlice.actions;
+export const { addToDoS, removeToDoS } = ToDoSlice.actions;
 export default ToDoSlice.reducer;

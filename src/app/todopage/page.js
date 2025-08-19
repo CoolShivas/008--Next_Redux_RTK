@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addToDoS } from "../redux/todoSlice";
+import { addToDoS, removeToDoS } from "../redux/todoSlice";
 
 const ToDoPage = () => {
   const [inputField, setInputField] = useState("");
@@ -37,9 +37,17 @@ const ToDoPage = () => {
       <section>
         <center>
           <h1>Display ToDos</h1>
+
           <ul>
             {getToDoData.map((curr) => {
-              return <li key={curr.id}>{curr.task}</li>;
+              return (
+                <li key={curr.id}>
+                  {curr.task}
+                  <button onClick={() => dispatch(removeToDoS(curr.id))}>
+                    Delete
+                  </button>
+                </li>
+              );
             })}
           </ul>
         </center>
