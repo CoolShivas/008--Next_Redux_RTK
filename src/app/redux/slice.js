@@ -12,7 +12,8 @@ const Slices = createSlice({
       console.log(action); // Getting the data on Browser Console as:-{type: 'addUserSlice/addUsers', payload: 'shiva'}
       const data = {
         id: nanoid(),
-        name: action.userName,
+        // name: action.userName,
+        name: action.payload, // Getting the payload only;
       };
       state.users.push(data);
     },
