@@ -1,7 +1,7 @@
 const { createSlice, nanoid, current } = require("@reduxjs/toolkit");
 
 const initialState = {
-  users: [],
+  users: JSON.parse(localStorage.getItem("mahakal")),
 };
 
 const Slices = createSlice({
