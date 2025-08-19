@@ -1,7 +1,9 @@
 const { createSlice, nanoid, current } = require("@reduxjs/toolkit");
 
 const initialState = {
-  users: JSON.parse(localStorage.getItem("mahakal")),
+  users: JSON.parse(localStorage.getItem("mahakal"))
+    ? JSON.parse(localStorage.getItem("mahakal"))
+    : [], // Handling the error if there where no data then show nothing instead of error;
 };
 
 const Slices = createSlice({
