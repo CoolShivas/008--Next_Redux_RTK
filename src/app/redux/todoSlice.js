@@ -1,8 +1,16 @@
-const { createSlice, nanoid } = require("@reduxjs/toolkit");
+const { createSlice, nanoid, createAsyncThunk } = require("@reduxjs/toolkit");
 
 const initialState = {
   toDoArr: [],
+  userAPIData: [],
 };
+
+export const fetchApiUser = createAsyncThunk("fetchApiUser", async () => {
+  const response = await fetch(
+    "https://backend-kwvs.onrender.com/api/uniforms/"
+  );
+  return response.json();
+});
 
 const ToDoSlice = createSlice({
   name: "toTheDoings",
@@ -22,6 +30,11 @@ const ToDoSlice = createSlice({
       });
       state.toDoArr = data;
     },
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchApiUser.fulfilled, (state, action) => {
+      (state.isloading = false), (state.userAPIData = action.payload);
+    });
   },
 });
 
