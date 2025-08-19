@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { addUsers } from "../redux/slice";
 import { useDispatch } from "react-redux";
+import Link from "next/link";
 
 const AddUsers = () => {
   const [inputValue, setInputValue] = useState("");
@@ -24,6 +25,7 @@ const AddUsers = () => {
         />
         <button onClick={handlerOnAddBtn}>Add</button>
       </center>
+      <Link href={"/removepage"}>Remove User Page</Link>
     </>
   );
 };
