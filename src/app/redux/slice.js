@@ -17,7 +17,9 @@ const Slices = createSlice({
       };
       state.users.push(data);
       // console.log(state.users); // Getting the data on Browser Console as:- Proxy(Array) {0: {…}}
-      console.log(current(state.users)); // Getting the data;
+      // console.log(current(state.users)); // Getting the data;
+      let localStorageSaveData = JSON.stringify(current(state.users));
+      localStorage.setItem("mahakal", localStorageSaveData);
     },
     removeUsers: (state, action) => {
       // console.log(action); // Getting the data on Browser Console as:-{type: 'addUserSlice/removeUsers', payload: 'FOjp5Pwr4c03uL5RYPDGD'}
