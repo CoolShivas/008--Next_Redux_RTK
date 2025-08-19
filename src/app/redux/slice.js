@@ -17,8 +17,15 @@ const Slices = createSlice({
       };
       state.users.push(data);
     },
+    removeUsers: (state, action) => {
+      // console.log(action); // Getting the data on Browser Console as:-{type: 'addUserSlice/removeUsers', payload: 'FOjp5Pwr4c03uL5RYPDGD'}
+      const data = state.users.filter((curr) => {
+        return curr.id !== action.payload;
+      });
+      state.users = data;
+    },
   },
 });
 
-export const { addUsers } = Slices.actions;
+export const { addUsers, removeUsers } = Slices.actions;
 export default Slices.reducer;
