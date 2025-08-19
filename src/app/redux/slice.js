@@ -1,4 +1,4 @@
-const { createSlice, nanoid } = require("@reduxjs/toolkit");
+const { createSlice, nanoid, current } = require("@reduxjs/toolkit");
 
 const initialState = {
   users: [],
@@ -16,6 +16,8 @@ const Slices = createSlice({
         name: action.payload, // Getting the payload only;
       };
       state.users.push(data);
+      // console.log(state.users); // Getting the data on Browser Console as:- Proxy(Array) {0: {…}}
+      console.log(current(state.users)); // Getting the data;
     },
     removeUsers: (state, action) => {
       // console.log(action); // Getting the data on Browser Console as:-{type: 'addUserSlice/removeUsers', payload: 'FOjp5Pwr4c03uL5RYPDGD'}
