@@ -30,7 +30,9 @@ const Slices = createSlice({
       });
       state.users = data;
       // localStorage.removeItem("mahakal", JSON.stringify(state.users)); // Removed all the localStorage data instead of particular one only;
-      localStorage.setItem("mahakal", JSON.stringify(state.users)); // Removing particular item from the localStorage data instead of all;
+      // localStorage.setItem("mahakal", JSON.stringify(state.users)); // Removing particular item from the localStorage data instead of all;
+      let localStorageRemoveData = JSON.stringify(data);
+      localStorage.setItem("mahakal", localStorageRemoveData); // Removing particular item from the localStorage data instead of all;
     },
   },
 });
